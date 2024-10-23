@@ -1,0 +1,96 @@
+body { 
+    font-family: 'Arial', sans-serif; 
+    background-color: #0d1b2a; /* Dark space-like background */
+    background-image: url('Space2.jpg'); /* Replace with an actual space-themed image URL */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    color: #fff; 
+} 
+
+.game-container { 
+    text-align: center; 
+} 
+
+h1 { 
+    font-size: 2.5em; 
+    color: #ffcc00; /* Star-like yellow */
+    margin-bottom: 20px; 
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.5); /* Starry glow */
+} 
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 120px); 
+    grid-gap: 15px; 
+    margin: 0 auto; 
+} 
+
+.card { 
+    width: 120px; 
+    height: 120px; 
+    position: relative; 
+    perspective: 1000px; 
+    cursor: pointer; 
+} 
+
+.card .front, 
+.card .back { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    backface-visibility: hidden; 
+    border-radius: 15px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 2em; 
+    font-weight: bold; 
+    border: 3px solid #ffcc00; /* Star-like yellow border */
+} 
+
+.card .front { 
+    background-color: #1c2541; /* Dark, starry sky color */
+    box-shadow: 0 0 15px rgba(28, 37, 65, 0.8), 0 0 20px rgba(255, 255, 255, 0.3); /* Space glow */
+} 
+
+.card .back { 
+    background-color: #4a5899; /* Planet-like blue */
+    color: #ffcc00; /* Starry yellow text */
+    transform: rotateY(180deg); 
+} 
+
+.card.flipped .front { 
+    transform: rotateY(180deg); 
+} 
+
+.card.flipped .back { 
+    transform: rotateY(360deg); 
+} 
+
+.restart { 
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    font-size: 1em; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #ffcc00; /* Star-like yellow */
+    color: #0d1b2a; /* Dark space text */
+    cursor: pointer; 
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.3); /* Starry glow for button */
+} 
+
+.restart:hover { 
+    background-color: #ffd700; /* Brighter hover effect */
+} 
+
+.time-display { 
+    margin-top: 10px; 
+    font-size: 1.2em; 
+    color: #ffcc00; /* Star-like yellow for time display */
+} 

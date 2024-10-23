@@ -1,0 +1,49 @@
+body { 
+    font-family: 'Arial', sans-serif; 
+    background-color: #222; /* Dark background for Halloween vibe */
+    color: #fff; /* White text for contrast */
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-image: url('halloween.jpg'); /*spooky background image */
+    background-size: cover; 
+}
+
+.game-container { 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 15px; 
+    padding: 20px; 
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.5); /* Orange glow effect */
+}
+
+.choices { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.choice { 
+    background-color: #ff8c00; /* Halloween orange */
+    border: 2px solid #333; 
+    padding: 10px 20px; 
+    margin: 0 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s; 
+    border-radius: 10px; 
+}
+
+.choice:hover { 
+    background-color: #434141; /* Lighter orange on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.result { 
+    margin-top: 30px; 
+    font-size: 1.5em; 
+    color: #ffcc00; /* Bright yellow for results */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for text effect */
+}
